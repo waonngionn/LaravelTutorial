@@ -55,6 +55,16 @@ tr th a:active{
 {{$items->appends(['sort' => $sort])->links()}}
 @endsection
 
+@if(Auth::check())
+<p>
+  USER: {{$user->name . '(' . $user->email . ')'}}
+</p>
+@else
+<p>
+  ※ログインしてません。(<a href="http://localhost/LaravelTutorial/laravelapp/public/login">ログイン</a>|<a href="http://localhost/LaravelTutorial/laravelapp/public/register">登録)</a>
+</p>
+@endif
+
 @section('footer')
 copyright 2017 mito.
 @endsection

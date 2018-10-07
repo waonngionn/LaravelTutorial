@@ -16,7 +16,7 @@ Route::get('/', function () {
 });
 
 // hello
-Route::get('hello', 'HelloController@index');
+Route::get('hello', 'HelloController@index')->middleware('auth');
 
 Route::get('hello/show', 'HelloController@show');
 
@@ -33,6 +33,9 @@ Route::get('hello/rest', 'HelloController@rest');
 
 Route::get('hello/session', 'HelloController@ses_get');
 Route::post('hello/session', 'HelloController@ses_put');
+
+Route::get('hello/auth', 'HelloController@getAuth');
+Route::post('hello/auth', 'HelloController@postAuth');
 
 
 // person
@@ -59,3 +62,7 @@ Route::post('board/add', 'BoardController@create');
 
 //Restdata
 Route::resource('rest', "RestdataController");
+
+Auth::routes();
+
+Route::get('/home', 'HomeController@index')->name('home');
