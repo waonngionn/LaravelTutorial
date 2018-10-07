@@ -13,24 +13,24 @@ class PeopleTableSeeder extends Seeder
   {
     $param = [
       'name' => 'mito',
-      'mail' => 'mito@naoki.com',
-      'age' => 19,
+      'mail' => 'mito@nexttolight.com',
+      'age' => 10,
     ];
     DB::table('people')->insert($param);
 
 
     $param = [
       'name' => 'joe',
-      'mail' => 'joe@watanabe.com',
-      'age' => 18,
+      'mail' => 'joe@nexttolight.com',
+      'age' => 4,
     ];
     DB::table('people')->insert($param);
 
 
     $param = [
       'name' => 'ryuunosuke',
-      'mail' => 'ryuunosuke@fukuzaki.com',
-      'age' => 19,
+      'mail' => 'ryuunosuke@nexttolight.com',
+      'age' => 80,
     ];
     DB::table('people')->insert($param);
   }

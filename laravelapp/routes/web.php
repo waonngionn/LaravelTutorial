@@ -29,6 +29,11 @@ Route::post('hello/edit', 'HelloController@update');
 Route::get('hello/remove', 'HelloController@remove');
 Route::post('hello/remove', 'HelloController@delete');
 
+Route::get('hello/rest', 'HelloController@rest');
+
+Route::get('hello/session', 'HelloController@ses_get');
+Route::post('hello/session', 'HelloController@ses_put');
+
 
 // person
 Route::get('person', 'PersonController@index');
@@ -51,3 +56,6 @@ Route::get('board', 'BoardController@index');
 
 Route::get('board/add', 'BoardController@add');
 Route::post('board/add', 'BoardController@create');
+
+//Restdata
+Route::resource('rest', "RestdataController");
